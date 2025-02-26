@@ -1,0 +1,57 @@
+body{
+    background-color: crimson;
+    font-size: 1.6rem;
+	font-family: Arial;
+	text-align: center;
+}
+
+header{
+    text-align: center;
+    color: white;
+}
+
+section{
+        background-color: white;
+        text-align: center;
+        width: 60vh;
+        padding: 3%;
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #0b0b0b;
+        display: flex;
+        flex-direction: column;
+}
+
+.form1 input{
+    font-size: 1rem;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.slc1{
+    border-radius: 10px;
+    background-color: crimson;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.field2{
+    background-color: crimson;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #0b0b0b;
+}
+
+.form1 input[type="submit"]{
+    font-size: 1rem;
+    background-color: #0b0b0b;  
+    color: white;
+    border-radius: 10px;
+}
+
+footer{
+    color: white;
+    text-align: center;
+}

@@ -14,13 +14,30 @@
 
     <section>
 
-    <form class="form1" action="acao.php" method="POST">
+    <form class="form1" method="POST">
 
         Seu nome <input type="text" name="nome">
         <br>
         Sua idade <input type="text" name="idade">
         <input type="submit" value="Enviar">
     </form>
+
+    <div class="php1">
+
+        <?php
+        if (isset($_POST['nome']) && isset($_POST['idade'])){
+            
+        $Vnome = $_POST["nome"];
+        $Vidade = $_POST["idade"];
+        
+            echo "Oi !! " . $Vnome . "." . "<br>" . " Você tem " . $Vidade . " anos !!";
+        }
+        else {
+            echo "Preencha os campos";
+        }
+        ?>
+
+    </div>
 
     </section>
 

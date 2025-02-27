@@ -22,6 +22,8 @@
 
         </form>
 
+        <div class="php1">
+
         <?php
         if (isset($_POST['txta']) && isset($_POST['txtb'])){
 	        $A = $_POST['txta'];
@@ -35,6 +37,8 @@
             echo '<strong>' . "insira os valores" . '</strong>';
         }
         ?>
+
+        </div>
 
     </section>
     <footer>

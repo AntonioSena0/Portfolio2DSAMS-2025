@@ -4,7 +4,7 @@
 <style>
 	body{
     background-color: royalblue;
-    font-size: 1.6rem;
+    font-size: 3rem;
 	font-family: Arial;
 	text-align: center;
 	color: white;

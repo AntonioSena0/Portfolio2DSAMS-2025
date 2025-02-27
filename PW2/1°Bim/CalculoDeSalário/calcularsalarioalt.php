@@ -22,11 +22,15 @@
         <strong>Digite o valor da hora...</strong>
         <input type="text" name="txtvalor">
         <br>
+        <div class="opções">
         <input type="submit" value="Salario">
         <br>
         <input type="reset" value="Limpar">
         <br>
+        </div>
 
+        <div class="php1">
+            
         <?php
         if(isset($_POST['txthora']) && isset($_POST['txtvalor'])){
             $valor = $_POST['txtvalor'];
@@ -38,6 +42,8 @@
             echo '<strong>' . "Preencha os campos" . '</strong>';
         }
         ?>
+
+        </div>
 
     </section>
 

@@ -1,4 +1,4 @@
---Exercício1
+ï»¿--Exercï¿½cio1
 
 -- Criando um BD
 create database ExercBD01
@@ -10,7 +10,7 @@ Create table Pet
 (
 -- Criando o campo NumRegistro
 NumRegistro int,
--- Criando o campo NomeDepto
+-- Criando o campo Nome
 Nome varchar(80),
 --Criando o campo Especie
 Especie varchar(25),
@@ -24,19 +24,9 @@ Nascimento datetime,
 Sexo varchar(9)
 );
 
-Create table Funcionario
-(
-CodFunc int,
-NomeDepto varchar(50),
-CodDepto int,
-Ramal int NULL,
-Salario float,
-DataAdimissao datetime,
-DataCadastro datetime,
-Sexo char(1)
-);
+delete Funcionario
 
---Exercício 2
+--Exercï¿½cio 2
 
 -- Criando um BD
 create database ExercBD02
@@ -64,7 +54,7 @@ DataCadastro datetime,
 Sexo char(1)
 );
 
---Exercício3
+--Exercï¿½cio3
 
 -- Criando um BD
 create database ExercBD03
@@ -80,25 +70,25 @@ Create table Produtos
 ID_Produto Int Primary Key Identity,
 -- Criando o campo Nome
 Nome Varchar(30) not null,
--- Criando o campo Preço
+-- Criando o campo Preco
 Preco float not null,
 -- Criando o campo Estoque
 Estoque int not null,
 );
 
--- Criando o cadastro de Funcionário
+-- Criando o cadastro de Funcionario
 
-Create table Funcionário
+Create table Funcionario
 (
 -- Criando o campo RM (Registro de Matricula)
-RM Int Primary Key Identity,
+RM int Primary Key Identity,
 -- Criando o campo Nome
 Nome Varchar(30) not null,
 -- Criando o campo CPF
 CPF Varchar(14) Unique not null,
 -- Criando o campo Cargo
 Cargo varchar(30) not null,
--- Criando o campo Salário
+-- Criando o campo Salï¿½rio
 Salario float not null
 );
 
@@ -127,7 +117,49 @@ ID_Departamento int Primary Key identity,
 -- Criando o campo Nome
 Nome varchar(30) not null,
 -- Criando o campo Local
-Local varchar(100) not null,
--- Criando o campo Responsável
+EndereÃ§o varchar(100) not null,
+-- Criando o campo Responsï¿½vel
 Responsavel varchar(30) Unique not null,
+);
+
+-- Criando um BD
+
+Create database ExercExtra
+
+-- Entrando no BD
+
+use ExercExtra
+
+-- Criando cadastro de Cargos
+
+Create table Cargos
+(
+-- Criando campo ID
+ID int Primary Key identity,
+-- Criando campo Nome
+Nome varchar(30) not null,
+-- Criando campo Cargo
+Cargo varchar(50) not null,
+-- Criando campo salario
+salario float not null,
+-- Criando campo CalendarioDeAdmissao
+CalendarioDeAdmissao date not null,
+);
+
+Create table Equipamento
+(
+-- Criando campo ID
+ID int Primary Key identity,
+-- Criando campo Teclado
+Teclado varchar(50) not null,
+-- Criando campo Mouse
+Mouse varchar(50) not null,
+-- Criando campo Monitor
+Monitor varchar(50) not null,
+-- Criando campo Impressora
+Impressora varchar(50) not null,
+-- Criando campo Webcam
+Webcam varchar(50) not null,
+-- Criando campo ValorTotal
+ValorTotal float not null,
 );

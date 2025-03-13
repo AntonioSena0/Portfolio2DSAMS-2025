@@ -1,22 +1,12 @@
 .body1{
     background-color: green;
-    text-align: center;
     font-family: Arial;
-    font-size: 2rem;
 }
 
 header{
     color: white;
-}
-
-section{
-    background-color: white;
     text-align: center;
-    width: 30vh;
-    padding: 2%;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px #0b0b0b;
+    font-size: 2rem;
 }
 
 .body2{
@@ -25,6 +15,30 @@ section{
     font-size: 3rem;
     text-align: center;
     font-family: Arial;    
+}
+
+.section1{
+    background-color: white;
+    text-align: center;
+    width: 30vh;
+    padding: 2%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #0b0b0b;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.section2{
+    background-color: white;
+    width: 30vh;
+    padding: 2%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #0b0b0b;
+    margin-top: 20px;
+    font-size: 1.7rem;
+    line-height: 5vh;
 }
 
 .num{
@@ -45,4 +59,6 @@ section{
 
 footer{
     color: white;
+    text-align: center;
+    font-size: 2rem;
 }

@@ -23,7 +23,7 @@
 
         </strong>    
         <br>
-        <input type="number" max="10" min="1" name="nt1" class="num">
+        <input type="number" max="10" min="1" name="nt1" class="num" required>
         <br>
         <strong>
 
@@ -31,7 +31,7 @@
 
         </strong> 
         <br>
-        <input type="number" max="10" min="1" name="nt2" class="num">      
+        <input type="number" max="10" min="1" name="nt2" class="num" required>      
         <br>
         <strong>
 
@@ -39,7 +39,7 @@
 
         </strong>    
         <br>
-        <input type="number" max="10" min="1" name="nt3" class="num">
+        <input type="number" max="10" min="1" name="nt3" class="num" required>
         <br>
         <strong>
 
@@ -47,7 +47,7 @@
 
         </strong> 
         <br>
-        <input type="number" max="10" min="1" name="nt4" class="num">     
+        <input type="number" max="10" min="1" name="nt4" class="num" required>     
         <br>
         <input type="submit" value="Confirmar" id="confirmar">        
 

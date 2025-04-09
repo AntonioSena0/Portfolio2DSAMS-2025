@@ -23,7 +23,7 @@
 
         </strong>    
         <br>
-        <input type="text" name="txtA" id="num">
+        <input type="text" name="txtA" id="num" required>
         <br>
         <input type="submit" value="Confirmar" id="confirmar">
 

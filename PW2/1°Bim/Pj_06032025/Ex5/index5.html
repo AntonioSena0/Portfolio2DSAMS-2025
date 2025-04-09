@@ -23,7 +23,7 @@
 
         </strong>    
         <br>
-        <input type="text" name="num1" class="num">
+        <input type="text" name="num1" class="num" required>
         <br>
         <strong>
 
@@ -31,7 +31,7 @@
 
         </strong> 
         <br>
-        <input type="text" name="num2" class="num">      
+        <input type="text" name="num2" class="num" required>      
         <br>
         <strong>   
         
@@ -39,7 +39,7 @@
 
         </strong> 
         <br>
-        <input type="text" name="num3" class="num">      
+        <input type="text" name="num3" class="num" required>      
         <br>
 
         <input type="submit" value="Confirmar" id="confirmar">        

@@ -23,7 +23,7 @@
 
         </strong>    
         <br>
-        <input type="text" name="VlrPrdt" class="num">
+        <input type="text" name="VlrPrdt" class="num" required>
         <br>
 
         <strong>
@@ -32,7 +32,7 @@
 
         </strong> 
         <br>
-        <input type="text" name="PorcDesc" class="num">
+        <input type="text" name="PorcDesc" class="num" required>
         <br>         
 
         <input type="submit" value="Confirmar" id="confirmar">

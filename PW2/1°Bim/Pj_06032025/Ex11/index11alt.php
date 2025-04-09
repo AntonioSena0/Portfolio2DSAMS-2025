@@ -62,12 +62,11 @@
         else{
             echo "";
         }
-
     ?>
 
     <hr>
 
-        <form id="form1" method="post">
+        <form class="form1"  method="post">
 
         <strong>
 

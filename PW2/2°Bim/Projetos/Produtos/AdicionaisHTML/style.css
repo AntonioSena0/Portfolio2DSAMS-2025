@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #2c3e50;
+    padding: 10px;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.header-container button {
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #34568B;
+    color: #fff;
+    border: #6fa8dc solid 3px;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.header-container button:hover {
+    background-color: #6fa8dc;
+    color: #fff;
+}
+
+.texto {
+    background-color: #34568B;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 2.1rem;
+    margin-bottom: 40px;
+}
+
+#php-part {
+    background-color: #fff;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo {
+    position: relative;
+    width: 300px;
+    margin: auto;
+}
+
+.php-listar, .php-inserir, .php-pesquisar, .php-alterar, .php-deletar {
+    position: absolute;
+    visibility: hidden;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    opacity: 0;
+    height: 50vh;
+    width: 50vh;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #2c3e50;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #34568B;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    background-color: #34568B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #6fa8dc;
+}
+
+.php-listar button, .php-inserir button, .php-pesquisar button, .php-alterar button, .php-deletar button {
+    background-color: #34568B;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.php-listar button:hover, .php-inserir button:hover, .php-pesquisar button:hover, .php-alterar button:hover, .php-deletar button:hover {
+    background-color: #6fa8dc;
+}
+
+#tabela {
+    height: 5vh;
+    width: 10vh;
+    background-color: #34568B;
+    color: #fff;
+    border: #2c3e50 1px solid;
+    border-radius: 10px;
+    margin-bottom: 35px;
+    transition: 500ms ease-in-out;
+}
+
+#tabela:hover {
+    background-color: #6fa8dc;
+}
+
+footer {
+    margin-top: 30.5%;
+    width: 100%;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    justify-content: end;
+    align-items: end;
+    position: relative;
+    margin: 0;
+}

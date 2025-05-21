@@ -35,22 +35,25 @@ public class NumPrimos {
     
     public void Verificar(double num) {
         setNum(num);
+        setP(true);
         
         if (getNum() < 2){
             JOptionPane.showMessageDialog(null, "O número não é primo");
         }
-        
-        for (int i = 2; i <= getNum() - 1; i++){
-            if(getNum() % i == 0) {
-                setP(false);
-            }
-        }
-
-        if(getP()){
-            JOptionPane.showMessageDialog(null, "O número é primo");
-        } 
         else{
-            JOptionPane.showMessageDialog(null, "O número não é primo");
+        
+            for (int i = 2; i <= getNum() - 1; i++){
+                if(getNum() % i == 0) {
+                    setP(false);
+                }
+            }
+        
+            if(getP()){
+                JOptionPane.showMessageDialog(null, "O número é primo");
+            } 
+            else{
+                JOptionPane.showMessageDialog(null, "O número não é primo");
+            }
         }
     }
 }

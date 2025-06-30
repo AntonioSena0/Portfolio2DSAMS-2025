@@ -15,16 +15,22 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
+<<<<<<< HEAD
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreVert
+=======
+>>>>>>> 06b4a1e4c284848453a7915a0478325c29367fff
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+<<<<<<< HEAD
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+=======
+>>>>>>> 06b4a1e4c284848453a7915a0478325c29367fff
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -154,6 +160,7 @@ fun AppAula7() {
     }
 }
 
+<<<<<<< HEAD
 @Composable
 fun RegiterScreen() {
     var username by remember { mutableStateOf(value = "") }
@@ -339,4 +346,10 @@ fun registerPreview() {
 @Composable
 fun HomoScreenPreview() {
     HomeScreen(username = "João")
+=======
+@Preview
+@Composable
+fun AppAula7Preview() {
+        AppAula7()
+>>>>>>> 06b4a1e4c284848453a7915a0478325c29367fff
 }

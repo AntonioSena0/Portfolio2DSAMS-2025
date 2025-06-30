@@ -9,9 +9,13 @@
 <section id="php-real" class="conteudo">
 
     <?php
+<<<<<<< HEAD
         include_once 'alunos.php';
         include_once 'cursos.php';
         include_once 'disciplinas.php';
+=======
+        include_once 'escola.php';
+>>>>>>> 06b4a1e4c284848453a7915a0478325c29367fff
 
         $l1 = new alunos();
         $l2 = new cursos();
@@ -53,6 +57,19 @@
     </table>
 
         <?php
+<<<<<<< HEAD
+=======
+        include_once 'escola.php';
+
+        $l1 = new alunos();
+        $l2 = new cursos();
+        $l3 = new disciplinas();
+        
+        $pro_bd1 = $l1->listar();
+        $pro_bd2 = $l2->listar();
+        $pro_bd3 = $l3->listar();
+
+>>>>>>> 06b4a1e4c284848453a7915a0478325c29367fff
         $table = $_POST['Tabela'] ?? null;
         if($table === "Cursos"){
     ?>
@@ -85,6 +102,19 @@
     </table>
 
         <?php
+<<<<<<< HEAD
+=======
+        include_once 'escola.php';
+
+        $l1 = new alunos();
+        $l2 = new cursos();
+        $l3 = new disciplinas();
+        
+        $pro_bd1 = $l1->listar();
+        $pro_bd2 = $l2->listar();
+        $pro_bd3 = $l3->listar();
+
+>>>>>>> 06b4a1e4c284848453a7915a0478325c29367fff
         $table = $_POST['Tabela'] ?? null;
         if($table === "Disciplinas"){
     ?>

@@ -9,7 +9,7 @@ public class Calculadora {
     private double r;
     
     public Calculadora(){
-        this(0, 0, 0);
+        this(0.0, 0.0, 0.0);
     }
     
     public Calculadora(double n1, double n2, double r) {
@@ -47,51 +47,47 @@ public class Calculadora {
         setN1(Double.parseDouble(JOptionPane.showInputDialog("Insira o primeiro número")));
         setN2(Double.parseDouble(JOptionPane.showInputDialog("Insira o segundo número")));
         
-        //Poderia ser setR(getN1() + getN2());
-        this.r = getN1() + getN2();
-        JOptionPane.showMessageDialog(null, "Resultado: " + this.r);
+        setR(getN1() + getN2());
+        JOptionPane.showMessageDialog(null, "Resultado: " + getR());
     }
     
-    public void subtração(double num1, double num2){
-        setN1(num1);
-        setN2(num2);
+    public void subtração(double a, double b){
+        setN1(a);
+        setN2(b);
         
-        //Poderia ser setR(getN1() - getN2());
-        this.r = getN1() - getN2();
-        JOptionPane.showMessageDialog(null, "Resultado: " + this.r);
+        setR(getN1() - getN2());
+        JOptionPane.showMessageDialog(null, "Resultado: " + getR());
     }
     
     public double multiplicar(){
         setN1(Double.parseDouble(JOptionPane.showInputDialog("Insira o primeiro número")));
         setN2(Double.parseDouble(JOptionPane.showInputDialog("Insira o segundo número")));
         
-        //Poderia ser setR(getN1() * getN2());
-        this.r = getN1() * getN2();
-        return this.r;
+        setR(getN1() * getN2());
+        return getR();
     }
     
-    public double dividir(double n1, double n2){
-        setN1(n1);
-        setN2(n2);
-        
-        //Poderia ser setR(getN1() / getN2());
-        this.r = getN1() / getN2();
-        return this.r;
-    }
-    
-    public double Potenciação(double n1, double n2){
-        setN1(n1);
-        setN2(n2);
+    public double dividir(double a, double b){
+        setN1(a);
+        setN2(b);
 
-        this.r = pow(getN1(), getN2());
-        return this.r;
+        setR(getN1() / getN2());
+        return getR();
     }
     
-    public double RaizQuadrada(double n1){
-        setN1(n1);
+    public double Potenciação(double a, double b){
+        setN1(a);
+        setN2(b);
+
+        setR(pow(getN1(), getN2()));
+        return getR();
+    }
+    
+    public double RaizQuadrada(double a){
+        setN1(a);
         
-        this.r = Math.sqrt(getN1());
-        return this.r;
+        setR(Math.sqrt(getN1()));
+        return getR();
     }
     
 }

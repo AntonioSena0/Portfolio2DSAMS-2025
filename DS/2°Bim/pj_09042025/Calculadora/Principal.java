@@ -12,15 +12,8 @@ public class Principal {
 
         do {
             op = Integer.parseInt(JOptionPane.showInputDialog(
-                    "Digite: " + "\n"
-                    + "1- Soma" + "\n"
-                    + "2- Subtração" + "\n"
-                    + "3- Multiplicação" + "\n"
-                    + "4- Divisão" + "\n"
-                    + "5- Potênciação" + "\n"
-                    + "6- Raiz Quadrada" + "\n"
-                    + "0- Sair"));
-
+"Digite: \n 1- Soma \n 2- Subtração \n 3- Multiplicação \n 4- Divisão \n 5- Potênciação \n 6- Raiz Quadrado \n 0- Sair"));
+            
             switch (op) {
 
                 case 1:
@@ -66,9 +59,9 @@ public class Principal {
                 default:
                     JOptionPane.showMessageDialog(null, "Inválido");
                     break;
+                    
             }
 
-        } while (op != 0);
-
+            } while (op != 0);
     }
 }

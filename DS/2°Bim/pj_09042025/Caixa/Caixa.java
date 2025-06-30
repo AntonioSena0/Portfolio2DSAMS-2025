@@ -6,7 +6,7 @@ public class Caixa {
     private double saldo;
     
     public Caixa(){
-        this(0);
+        this(0.0);
     }
     
     public Caixa(double saldo){

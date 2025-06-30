@@ -56,10 +56,10 @@
     
     if(isset($_POST['MQuad'])){
     $MQ = $_POST['MQuad'];
-    if($MQ > 0){
+    if(is_numeric($MQ) && $MQ > 0){
         Calcular($MQ);
     }
-    else if($MQ == String){
+    else{
         echo "Inválido";
     }
     }

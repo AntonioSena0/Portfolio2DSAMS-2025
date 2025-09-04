@@ -9,13 +9,9 @@
 <section id="php-real" class="conteudo">
 
     <?php
-<<<<<<< HEAD
         include_once 'alunos.php';
         include_once 'cursos.php';
         include_once 'disciplinas.php';
-=======
-        include_once 'escola.php';
->>>>>>> 06b4a1e4c284848453a7915a0478325c29367fff
 
         $l1 = new alunos();
         $l2 = new cursos();
@@ -24,6 +20,46 @@
         $pro_bd1 = $l1->listar();
         $pro_bd2 = $l2->listar();
         $pro_bd3 = $l3->listar();
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnenviar'])) {
+            $tabela = $_POST['Tabela'];
+
+            switch ($tabela) {
+                case 'Alunos':
+                    include_once 'alunos.php';
+                    $aluno = new alunos();
+                    $aluno->setMatricula(trim($_POST['matricula']));
+                    $aluno->setNome(trim($_POST['nome']));
+                    $aluno->setEndereco(trim($_POST['endereco']));
+                    $aluno->setCidade(trim($_POST['cidade']));
+                    $aluno->setCodCurso(trim($_POST['codcurso']));
+                    echo "<h3>" . $aluno->salvar() . "</h3>";
+                    $pro_bd1 = $aluno->listar();
+                    break;
+
+                case 'Cursos':
+                    include_once 'cursos.php';
+                    $curso = new cursos();
+                    $curso->setCodCurso(trim($_POST['codcurso_curso']));
+                    $curso->setNome(trim($_POST['nome_curso']));
+                    $curso->setCodDisc1(trim($_POST['coddisc1']));
+                    $curso->setCodDisc2(trim($_POST['coddisc2']));
+                    $curso->setCodDisc3(trim($_POST['coddisc3']));
+                    echo "<h3>" . $curso->salvar() . "</h3>";
+                    $pro_bd2 = $curso->listar();
+                    break;
+
+                case 'Disciplinas':
+                    include_once 'disciplinas.php';
+                    $disciplina = new disciplinas();
+                    $disciplina->setCodDisciplina(trim($_POST['coddisciplina']));
+                    $disciplina->setNomeDisciplina(trim($_POST['nome_disciplina']));
+                    echo "<h3>" . $disciplina->salvar() . "</h3>";
+                    $pro_bd3 = $disciplina->listar();
+                    break;
+            }
+        }
+
 
         $table = $_POST['Tabela'] ?? null;
         if($table === "Alunos"){
@@ -57,19 +93,6 @@
     </table>
 
         <?php
-<<<<<<< HEAD
-=======
-        include_once 'escola.php';
-
-        $l1 = new alunos();
-        $l2 = new cursos();
-        $l3 = new disciplinas();
-        
-        $pro_bd1 = $l1->listar();
-        $pro_bd2 = $l2->listar();
-        $pro_bd3 = $l3->listar();
-
->>>>>>> 06b4a1e4c284848453a7915a0478325c29367fff
         $table = $_POST['Tabela'] ?? null;
         if($table === "Cursos"){
     ?>
@@ -102,19 +125,6 @@
     </table>
 
         <?php
-<<<<<<< HEAD
-=======
-        include_once 'escola.php';
-
-        $l1 = new alunos();
-        $l2 = new cursos();
-        $l3 = new disciplinas();
-        
-        $pro_bd1 = $l1->listar();
-        $pro_bd2 = $l2->listar();
-        $pro_bd3 = $l3->listar();
-
->>>>>>> 06b4a1e4c284848453a7915a0478325c29367fff
         $table = $_POST['Tabela'] ?? null;
         if($table === "Disciplinas"){
     ?>

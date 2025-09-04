@@ -51,13 +51,33 @@ class cursos{
     function listar(){
         try{
             $this-> conn = new conexão();
-            $sql = $this->conn->query("select * from cursos order by nome");
+            $sql = $this->conn->query("select * from cursos order by codcurso");
             $sql->execute();
             return $sql->fetchAll();
             $this->conn = null;
         }
         catch(PDOException $exc){
             echo "Erro ao executar consulta. " . $exc->getMessage();
+        }
+    }
+    function salvar() {
+        try {
+            $this->conn = new conexão();
+            $sql = $this->conn->prepare("INSERT INTO cursos (codcurso, nome, coddisc1, coddisc2, coddisc3) VALUES (?, ?, ?, ?, ?)");
+            @$sql->bindParam(1, $this->codcurso, PDO::PARAM_INT);
+            @$sql->bindParam(2, $this->nome, PDO::PARAM_STR);
+            @$sql->bindParam(3, $this->coddisc1, PDO::PARAM_INT);
+            @$sql->bindParam(4, $this->coddisc2, PDO::PARAM_INT);
+            @$sql->bindParam(5, $this->coddisc3, PDO::PARAM_INT);
+            
+            if ($sql->execute()) {
+                return "Registro salvo com sucesso!";
+            }
+            else {
+                return "Erro ao salvar registro";
+            }
+        } catch (PDOException $exc) {
+            return "Erro ao salvar registro: " . $exc->getMessage();
         }
     }
 }

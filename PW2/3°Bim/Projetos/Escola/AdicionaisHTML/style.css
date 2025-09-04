@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    background-color: #6a4c9c;
+    padding: 10px;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-container button {
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #9b74d7;
+    color: #fff;
+    border: #9e7ae4 solid 3px;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.header-container button:hover {
+    background-color: #ae8ce5;
+    color: #fff;
+}
+
+.texto {
+    background-color: #9b74d7;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 2.1rem;
+    margin-bottom: 40px;
+}
+
+#php-part {
+    background-color: #fff;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.php-listar, .php-inserir, .php-alterar{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    position: relative;
+    visibility: hidden;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    opacity: 0;
+    height: 50vh;
+    width: 50vh;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #2c3e50;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #9e7ae4;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    background-color: #9b74d7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #ae8ce5;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.input-area {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 240px;
+}
+
+.grupo-inputs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.grupo-inputs input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #9e7ae4;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.grupo-inputs.active {
+    display: flex;
+}
+
+
+.php-listar button, .php-inserir button, .php-pesquisar button, .php-alterar button, .php-deletar button {
+    background-color: #9b74d7;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.php-listar button:hover, .php-inserir button:hover, .php-pesquisar button:hover, .php-alterar button:hover, .php-deletar button:hover {
+    background-color: #ae8ce5;
+}
+
+#tabela, #tabelaInserir {
+    height: 5vh;
+    width: 10vh;
+    background-color: #9b74d7;
+    color: #fff;
+    border: #9e7ae4 1px solid;
+    border-radius: 10px;
+    margin-bottom: 35px;
+    transition: 500ms ease-in-out;
+}
+
+#tabela:hover {
+    background-color: #ae8ce5;
+}
+
+footer {
+    margin-top: 30.5%;
+    width: 100%;
+    background-color: #6a4c9c;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    justify-content: end;
+    align-items: end;
+    position: relative;
+    margin: 0;
+}

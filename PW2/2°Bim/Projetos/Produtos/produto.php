@@ -45,25 +45,23 @@ class produto{
         }
     }
 
-function adicionar() {
-    if (isset($_POST['nome']) && isset($_POST['estoque'])) {
-        $this->setNome($_POST['nome']);
-        $this->setEstoque($_POST['estoque']);
-
+    public function salvar() {
         try {
             $this->conn = new conexão();
-            $sql = $this->conn->prepare("INSERT INTO produtos (nome, estoque) VALUES (:nome, :estoque)");
-            $nome = $this->getNome();
-            $estoque = $this->getEstoque();
-            $sql->bindParam(':nome', $nome);
-            $sql->bindParam(':estoque', $estoque);
-            $sql->execute();
-            $this->conn = null;
+            $sql = $this->conn->prepare("INSERT INTO produtos (nome, estoque) VALUES (?, ?)");
+            @$sql->bindParam(1, $this->nome, PDO::PARAM_STR);
+            @$sql->bindParam(2, $this->estoque, PDO::PARAM_INT);
+            
+            if ($sql->execute()) {
+                return "Registro salvo com sucesso!";
+            }
+            else {
+                return "Erro ao salvar registro";
+            }
         } catch (PDOException $exc) {
-            echo "Erro ao executar consulta. " . $exc->getMessage();
+            return "Erro ao salvar registro: " . $exc->getMessage();
         }
     }
-}
 }
 
 ?>

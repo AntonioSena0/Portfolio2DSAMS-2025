@@ -60,3 +60,23 @@ document.querySelectorAll('.voltar').forEach(button => {
         hideAllSections();
     });
 });
+
+const selectTabela = document.getElementById('tabelaInserir');
+const grupos = {
+    Alunos: document.querySelector('.grupo-alunos'),
+    Cursos: document.querySelector('.grupo-cursos'),
+    Disciplinas: document.querySelector('.grupo-disciplinas')
+};
+
+function mostrarGrupo(tipo) {
+    Object.values(grupos).forEach(grupo => grupo.classList.remove('active'));
+    grupos[tipo].classList.add('active');
+}
+
+selectTabela.addEventListener('change', () => {
+    mostrarGrupo(selectTabela.value);
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    mostrarGrupo(selectTabela.value);
+});

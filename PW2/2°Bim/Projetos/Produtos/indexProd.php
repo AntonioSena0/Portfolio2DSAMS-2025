@@ -11,10 +11,6 @@
     <?php 
         include_once 'produto.php';
         $l = new produto();
-
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $l->adicionar();
-        }
         
         $pro_bd = $l->listar();
     ?>

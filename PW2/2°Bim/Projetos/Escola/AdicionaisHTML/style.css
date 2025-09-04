@@ -84,7 +84,6 @@ input[type="text"] {
     border: 2px solid #9e7ae4;
     border-radius: 5px;
     font-size: 1rem;
-    margin-bottom: 10px;
     transition: border-color 0.3s;
 }
 
@@ -103,6 +102,43 @@ input[type="submit"]:hover {
     background-color: #ae8ce5;
 }
 
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.input-area {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 240px;
+}
+
+.grupo-inputs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.grupo-inputs input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #9e7ae4;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.grupo-inputs.active {
+    display: flex;
+}
+
+
 .php-listar button, .php-inserir button, .php-pesquisar button, .php-alterar button, .php-deletar button {
     background-color: #9b74d7;
     color: #fff;
@@ -118,7 +154,7 @@ input[type="submit"]:hover {
     background-color: #ae8ce5;
 }
 
-#tabela {
+#tabela, #tabelaInserir {
     height: 5vh;
     width: 10vh;
     background-color: #9b74d7;

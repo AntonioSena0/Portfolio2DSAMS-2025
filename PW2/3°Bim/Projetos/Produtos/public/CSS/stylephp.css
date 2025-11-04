@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f4f4f9 0%, #e8eaf6 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+#php-real h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #007BFF;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid #b3d9ff;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+thead th {
+    background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+}
+
+tbody td {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #5a5a5a;
+    border-bottom: 1px solid #e6f2ff;
+}
+
+tbody tr:hover {
+    background: linear-gradient(135deg, #e6f2ff 0%, #d9ebff 100%);
+    transform: translateY(-1px);
+    transition: all 0.3s ease;
+}
+
+button {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+#php-real {
+    text-align: center;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+    width: 95%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    border: 1px solid #e6f2ff;
+}
+
+header, footer {
+    width: 100%;
+    padding: 1rem 0;
+    background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+    color: white;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-container, .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.delete-icon {
+    color: #e53935;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.delete-icon:hover {
+    color: #c62828;
+    transform: scale(1.2);
+}
+
+.update-icon {
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.update-icon:hover {
+    color: #0056b3;
+    transform: scale(1.2);
+}
+
+.search-bar {
+    margin: 2rem 0;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: 2px solid #b3d9ff;
+    border-radius: 50px;
+    outline: none;
+    background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.2);
+}
+
+.search-bar input::placeholder {
+    color: gray;
+    font-style: italic;
+}
+
+.search-bar button {
+    height: 60px;
+    position: absolute;
+    border-radius: 0px 50px 50px 0px;
+    right: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.7rem 1.5rem;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    padding: 10rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+#modal > div {
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 500px;
+    border: 1px solid #e1e5e9;
+    animation: slideUp 0.3s ease;
+}
+
+#modal h3 {
+    margin: 0 0 2rem 0;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #4299e1;
+}
+
+#modal label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+#modal input[type="text"] {
+    width: 40%;
+    padding: 1rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+#modal input[type="text"]:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+    transform: translateY(-2px);
+}
+
+#modal button[type="submit"] {
+    background: #4299e1;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 40%;
+    margin-bottom: 1rem;
+}
+
+#modal button[type="submit"]:hover {
+    background: #3182ce;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(66, 153, 225, 0.3);
+}
+
+#modal .button {
+    background: #a0aec0;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 40%;
+    margin-bottom: 1rem;
+}
+
+#modal .button:hover {
+    background: #718096;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(160, 174, 192, 0.3);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    #modal > div {
+        padding: 2rem;
+        margin: 1rem;
+    }
+    
+    #modal h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    #modal input[type="text"] {
+        padding: 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    #modal button[type="submit"],
+    #modal .button {
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+.header-container button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #007BFF;
+    background: linear-gradient(135deg, #ffffff 0%, #e6f2ff 100%);
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.header-container button:hover {
+    background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+    color: white;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.footer-container h4 {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    #php-real {
+        padding: 1.5rem;
+        margin: 1rem;
+        width: 95%;
+    }
+    
+    #modal > div {
+        padding: 2rem;
+        margin: 1rem;
+    }
+    
+    #modal h3 {
+        font-size: 1.5rem;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    thead th, tbody td {
+        padding: 0.8rem;
+    }
+}
+
+td a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+td a:hover {
+    background: rgba(0, 123, 255, 0.1);
+    transform: scale(1.1);
+}

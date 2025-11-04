@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f4f4f9 0%, #e8eaf6 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+#php-real h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #7e57c2;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid #d1c4e9;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+thead th {
+    background: linear-gradient(135deg, #9b74d7 0%, #7e57c2 100%);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+}
+tbody td {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #5a5a5a;
+    border-bottom: 1px solid #e8eaf6;
+}
+tbody tr:hover {
+    background: linear-gradient(135deg, #f3e5f5 0%, #ede7f6 100%);
+    transform: translateY(-1px);
+    transition: all 0.3s ease;
+}
+button {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #9b74d7 0%, #7e57c2 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(155, 116, 215, 0.3);
+}
+button:hover {
+    background: linear-gradient(135deg, #8a65c5 0%, #6a4bac 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(155, 116, 215, 0.4);
+}
+#php-real {
+    text-align: center;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+    width: 95%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    border: 1px solid #e8eaf6;
+}
+header, footer {
+    width: 100%;
+    padding: 1rem 0;
+    background: linear-gradient(135deg, #9b74d7 0%, #7e57c2 100%);
+    color: white;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.header-container, .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.delete-icon {
+    color: #e53935;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+.delete-icon:hover {
+    color: #c62828;
+    transform: scale(1.2);
+}
+.update-icon {
+    color: #5c6bc0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+.update-icon:hover {
+    color: #3949ab;
+    transform: scale(1.2);
+}
+.search-form {
+    margin: 2rem 0;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 2rem auto;
+}
+.search-form input {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: 2px solid #d1c4e9;
+    border-radius: 50px;
+    outline: none;
+    background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+    box-shadow: 0 4px 15px rgba(155, 116, 215, 0.1);
+    transition: all 0.3s ease;
+}
+.search-form input:focus {
+    border-color: #9b74d7;
+    box-shadow: 0 4px 20px rgba(155, 116, 215, 0.2);
+}
+.search-form input::placeholder {
+    color: #b39ddb;
+    font-style: italic;
+}
+
+.search-form button {
+    height: 60px;
+    position: absolute;
+    border-radius: 0px 50px 50px 0px;
+    right: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.7rem 1.5rem;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(123, 102, 157, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+#modal:target {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#modal > div {
+    background: linear-gradient(135deg, #ffffff 0%, #f3e5f5 100%);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(123, 102, 157, 0.3);
+    width: 90%;
+    max-width: 500px;
+    border: 2px solid #d1c4e9;
+    animation: slideUp 0.4s ease;
+}
+#modal h3 {
+    margin: 0 0 2rem 0;
+    color: #7e57c2;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #9b74d7;
+}
+#modal label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: #5a5a5a;
+    font-weight: 500;
+    font-size: 1rem;
+}
+#modal input[type="text"] {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #d1c4e9;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    background: #fafafa;
+}
+#modal input[type="text"]:focus {
+    outline: none;
+    border-color: #9b74d7;
+    box-shadow: 0 0 0 3px rgba(155, 116, 215, 0.1);
+    transform: translateY(-2px);
+    background: #ffffff;
+}
+#modal button[type="submit"] {
+    background: linear-gradient(135deg, #9b74d7 0%, #7e57c2 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(155, 116, 215, 0.3);
+}
+#modal button[type="submit"]:hover {
+    background: linear-gradient(135deg, #8a65c5 0%, #6a4bac 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(155, 116, 215, 0.4);
+}
+#modal .button {
+    display: block;
+    text-align: center;
+    background: linear-gradient(135deg, #b39ddb 0%, #9575cd 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(179, 157, 219, 0.3);
+}
+#modal .button:hover {
+    background: linear-gradient(135deg, #a593cc 0%, #8566c4 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(179, 157, 219, 0.4);
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.header-container button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #7e57c2;
+    background: linear-gradient(135deg, #ffffff 0%, #f3e5f5 100%);
+    border: 2px solid #9b74d7;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(155, 116, 215, 0.2);
+}
+.header-container button:hover {
+    background: linear-gradient(135deg, #9b74d7 0%, #7e57c2 100%);
+    color: white;
+    border-color: #7e57c2;
+    transform: translateY(-2px);
+}
+.footer-container h4 {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 400;
+}
+@media (max-width: 768px) {
+    #php-real {
+        padding: 1.5rem;
+        margin: 1rem;
+        width: 95%;
+    }
+    #modal > div {
+        padding: 2rem;
+        margin: 1rem;
+    }
+    #modal h3 {
+        font-size: 1.5rem;
+    }
+    table {
+        font-size: 0.9rem;
+    }
+    thead th, tbody td {
+        padding: 0.8rem;
+    }
+}
+td a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+td a:hover {
+    background: rgba(155, 116, 215, 0.1);
+    transform: scale(1.1);
+}

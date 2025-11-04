@@ -1,8 +1,26 @@
-# List App
----
-## All App
-![Affirmations](https://github.com/user-attachments/assets/36cbbaa6-fb5b-4f06-b302-b350fe78c9b2)
-![Affirmations](https://github.com/user-attachments/assets/1a4d8888-db31-401c-b6b9-2350faa94cd2)
-![Affirmations](https://github.com/user-attachments/assets/826a7fac-b99e-4d3e-a6a4-82a51b57cc57)
-![Affirmations](https://github.com/user-attachments/assets/e58905d5-3df7-4afc-88be-880aff727641)
-![Affirmations](https://github.com/user-attachments/assets/79c2a3ca-f9d3-46e1-8008-22a2acc75954)
+Affirmations App - Starter Code
+================================
+
+Starter code for the Android Basics with Compose: Affirmations app.
+
+
+Introduction
+------------
+The Affirmations app contains a scrollable list of 10 cards.
+
+
+Pre-requisites
+--------------
+* Familiarity with Lists in Kotlin
+* Experience building layouts with Jetpack Compose
+* Experience running apps on a device or emulator
+
+
+Getting Started
+---------------
+1. Install Android Studio, if you don't already have it.
+2. Download the sample.
+3. Import the sample into Android Studio.
+4. Build and run the sample.
+
+All photos by Romain Guy. All photos are licensed under CC0 https://creativecommons.org/share-your-work/public-domain/cc0/
